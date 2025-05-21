@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{svg}
+\usepackage[hmargin=2.5cm]{geometry}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+
+
+% Variables to fill to match your use
+\def \titlename {Cryptography - Final Project}
+\def \subtitle {Code available here : https://link.to.my.code/crypto}
+\def \authorname {acmo0 - {\tt acmo0@acmo0.org}}
+\def \logopath {logos/tsp.png}
+\def \institutionname {Télécom SudParis}
+\def \authorinfo {2 - 2024/2025}
+\def \datevalue {\today}
+
+%Start of template
+\title{\titlename}
+\author{\authorname}
+\date{\datevalue}
+
+% Define page header and footer
+\footskip=70pt
+\def\companylogo{\includegraphics[scale=0.1]{\logopath}}
+\fancypagestyle{fancy}
+{
+    \fancyhf{}
+    
+    \fancyfoot[L]
+    {
+        \parbox[b]{\dimexpr\linewidth-2.5cm\relax}
+        {
+            Page \thepage \hfill {\sffamily \bfseries \institutionname} \\
+            {\color{black}\rule{\dimexpr\linewidth\relax}{0.4pt}}\\
+            \authorname\hfill \authorinfo\\
+        }
+    }
+    \fancyfoot[R]
+    {
+        \parbox[b]{2cm}{\companylogo}%
+    }
+}
+
+
+\begin{document}
+
+% First page of the document
+\begin{titlepage}
+    \begin{center}
+        \includegraphics[width=3cm]{\logopath}\\[0.5cm]
+        {\Huge \institutionname\\[0.5cm]
+        \titlename}\\[2cm]
+        \linespread{1.2}\LARGE {
+        \subtitle}
+        \linespread{1}~\\[2cm]
+        {\Large\authorname}\\[1cm] 
+        \vfill
+        {\Large\datevalue}
+    \end{center}
+\end{titlepage}
+
+% Set page style
+\pagestyle{fancy}
+\pagebreak
+
+% Write your document here
+This is my first page
+\end{document}
