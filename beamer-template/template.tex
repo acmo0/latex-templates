@@ -1,0 +1,66 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{slashed}
+\usepackage{datetime}
+\usepackage[french]{babel}
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage[absolute,overlay]{textpos}
+
+\usetheme{Madrid}
+\graphicspath{{plots/}}
+
+
+% Variables to set
+\def\meetingname{Meeting}
+\def\subtitle{Subtitle}
+\def\authorname{Author}
+\def\institutionname{Institution Name}
+\def\institutionshort{IN}
+\def\logopath{path/to/logo}
+
+% Start of template
+\def\Put(#1,#2)#3{\leavevmode\makebox(0,0){\put(#1,#2){#3}}}
+\def\mydate{\leavevmode\hbox{\the\year-\twodigits\month-\twodigits\day}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+\def\companylogo{\includegraphics[scale=0.1]{\logopath}}
+
+
+\newcommand\Wider[2][3em]{
+\makebox[\linewidth][c]{
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+  \raggedright
+  \centering#2
+  \end{minipage}
+  }
+}
+
+
+
+\title[\meetingname]{{\bf \subtitle}}
+\author{\authorname}
+
+\institute[\institutionshort]{\institutionname}
+\date[\mydate]{\meetingname\\\today}
+
+\logo{
+\includegraphics[scale=0.05]{\logopath}
+}
+\begin{document}
+
+
+\begin{frame}[plain,t]
+\titlepage
+	\begin{center}
+	
+	\companylogo
+	\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Sommaire}
+	\tableofcontents
+\end{frame}
+
+\end{document}
